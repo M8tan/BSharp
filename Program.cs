@@ -10,7 +10,7 @@ float delayInSeconds = (float)settings.delayInMilliseconds / 1000;
 
 Console.WriteLine("===== BSharp =====");
 Console.WriteLine("The app will make a sound every " + delayInSeconds + " seconds");
-int iritationCounter = -1;
+int iritationCounter = 0;
 
 Task inputTask = Task.Run(() =>
 {
@@ -30,7 +30,7 @@ try
     {
         iritationCounter++;
         await Task.Delay(settings.delayInMilliseconds, cts.Token); 
-        if(iritationCounter != 0)
+        if(iritationCounter > 0)
         {
             Console.WriteLine(iritationCounter);
             Console.Beep();
@@ -40,8 +40,8 @@ try
 {
     stopwatch.Stop();
     TimeSpan elapsed = stopwatch.Elapsed;
-    Console.WriteLine($"Well done!\n{iritationCounter} iterations completed in {(int)elapsed.TotalHours} hours, {elapsed.Minutes} minutes and {elapsed.Seconds} seconds!");
-    Thread.Sleep(5);    
+    Console.WriteLine($"Well done!\n{iritationCounter-1} iterations completed in {(int)elapsed.TotalHours} hours, {elapsed.Minutes} minutes and {elapsed.Seconds} seconds!");
+    Thread.Sleep(5000);    
 }
 
 public class AppSettings
