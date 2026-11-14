@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WJ9x/PGTyYE=",
+  "dgSpecHash": "uDsKMn888QU=",
   "success": true,
-  "projectFilePath": "c:\\Projects\\BSharp\\BSharp.csproj",
+  "projectFilePath": "C:\\Projects\\BSharp\\BSharp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.net.illink.tasks\\10.0.9\\microsoft.net.illink.tasks.10.0.9.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\10.0.9\\microsoft.netcore.app.runtime.win-x64.10.0.9.nupkg.sha512",

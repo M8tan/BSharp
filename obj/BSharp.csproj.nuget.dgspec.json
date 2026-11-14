@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Projects\\BSharp\\BSharp.csproj": {}
+    "C:\\Projects\\BSharp\\BSharp.csproj": {}
   },
   "projects": {
-    "c:\\Projects\\BSharp\\BSharp.csproj": {
+    "C:\\Projects\\BSharp\\BSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Projects\\BSharp\\BSharp.csproj",
+        "projectUniqueName": "C:\\Projects\\BSharp\\BSharp.csproj",
         "projectName": "BSharp",
-        "projectPath": "c:\\Projects\\BSharp\\BSharp.csproj",
+        "projectPath": "C:\\Projects\\BSharp\\BSharp.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "c:\\Projects\\BSharp\\obj\\",
+        "outputPath": "C:\\Projects\\BSharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config"

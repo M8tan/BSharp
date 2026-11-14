@@ -200,3 +200,4 @@ c:\Projects\BSharp\obj\Release\net10.0\win-x64\refint\BSharp.dll
 c:\Projects\BSharp\obj\Release\net10.0\win-x64\BSharp.pdb
 c:\Projects\BSharp\obj\Release\net10.0\win-x64\BSharp.genruntimeconfig.cache
 c:\Projects\BSharp\obj\Release\net10.0\win-x64\ref\BSharp.dll
+C:\Projects\BSharp\obj\Release\net10.0\win-x64\BSharp.sourcelink.json
