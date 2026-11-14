@@ -1,0 +1,50 @@
+﻿using System.Diagnostics;
+using System.Dynamic;
+using System.Text.Json;
+
+using var cts = new CancellationTokenSource();
+Stopwatch stopwatch = Stopwatch.StartNew();
+string json = File.ReadAllText("config.json");
+AppSettings settings = JsonSerializer.Deserialize<AppSettings>(json) ?? new AppSettings();
+float delayInSeconds = (float)settings.delayInMilliseconds / 1000;
+
+Console.WriteLine("===== BSharp =====");
+Console.WriteLine("The app will make a sound every " + delayInSeconds + " seconds");
+int iritationCounter = -1;
+
+Task inputTask = Task.Run(() =>
+{
+    while (!cts.IsCancellationRequested)
+    {
+        if(Console.ReadKey(true).Key == ConsoleKey.E)
+        {
+            cts.Cancel();
+            break;
+        }
+    }
+});
+
+try
+{
+    while (!cts.Token.IsCancellationRequested)
+    {
+        iritationCounter++;
+        await Task.Delay(settings.delayInMilliseconds, cts.Token); 
+        if(iritationCounter != 0)
+        {
+            Console.WriteLine(iritationCounter);
+            Console.Beep();
+        }   
+    }
+} catch (OperationCanceledException)
+{
+    stopwatch.Stop();
+    TimeSpan elapsed = stopwatch.Elapsed;
+    Console.WriteLine($"Well done!\n{iritationCounter} iterations completed in {(int)elapsed.TotalHours} hours, {elapsed.Minutes} minutes and {elapsed.Seconds} seconds!");
+    Thread.Sleep(5);    
+}
+
+public class AppSettings
+{
+    public int delayInMilliseconds { get; set; } = 100;
+}

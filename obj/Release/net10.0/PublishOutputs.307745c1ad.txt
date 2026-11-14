@@ -1,0 +1,5 @@
+c:\Projects\BSharp\bin\Release\net10.0\publish\BSharp.exe
+c:\Projects\BSharp\bin\Release\net10.0\publish\BSharp.dll
+c:\Projects\BSharp\bin\Release\net10.0\publish\BSharp.deps.json
+c:\Projects\BSharp\bin\Release\net10.0\publish\BSharp.runtimeconfig.json
+c:\Projects\BSharp\bin\Release\net10.0\publish\BSharp.pdb

@@ -1,0 +1,2 @@
+C:\Projects\BSharp\bin\Release\net10.0\win-x64\publish\BSharp.pdb
+C:\Projects\BSharp\bin\Release\net10.0\win-x64\publish\BSharp.exe
