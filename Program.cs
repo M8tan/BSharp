@@ -7,9 +7,11 @@ Stopwatch stopwatch = Stopwatch.StartNew();
 string json = File.ReadAllText("config.json");
 AppSettings settings = JsonSerializer.Deserialize<AppSettings>(json) ?? new AppSettings();
 float delayInSeconds = (float)settings.delayInMilliseconds / 1000;
-
+int delayInMinutes = (settings.delayInMilliseconds / 1000) / 60;
+delayInSeconds -= delayInMinutes * 60;
+string timeText = (delayInMinutes > 0) ? $"{delayInMinutes} minutes and {delayInSeconds} seconds" : $"{delayInSeconds} seconds";
 Console.WriteLine("===== BSharp =====");
-Console.WriteLine("The app will make a sound every " + delayInSeconds + " seconds");
+Console.WriteLine($"The app will make a sound every " + timeText);
 int iritationCounter = 0;
 
 Task inputTask = Task.Run(() =>
