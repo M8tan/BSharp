@@ -9,7 +9,7 @@ AppSettings settings = JsonSerializer.Deserialize<AppSettings>(json) ?? new AppS
 float delayInSeconds = (float)settings.delayInMilliseconds / 1000;
 int delayInMinutes = (settings.delayInMilliseconds / 1000) / 60;
 delayInSeconds -= delayInMinutes * 60;
-string timeText = (delayInMinutes > 0) ? $"{delayInMinutes} minutes and {delayInSeconds} seconds" : $"{delayInSeconds} seconds";
+string timeText = (delayInMinutes > 0) ? $"{delayInMinutes} minute" + ((delayInMinutes == 1) ? " " : "s ") + ((delayInSeconds > 0) ? $"and {delayInSeconds} second" + ((delayInSeconds == 1) ? " " : "s ") : "")  : $"{delayInSeconds} second" + ((delayInSeconds == 1) ? "" : "s");
 Console.WriteLine("===== BSharp =====");
 Console.WriteLine($"The app will make a sound every " + timeText);
 int iritationCounter = 0;

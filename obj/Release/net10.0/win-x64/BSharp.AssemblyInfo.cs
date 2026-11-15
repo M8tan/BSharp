@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BSharp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+822ef90e7f3f0fd8d67afaaa4da6866b44bbf515")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a284c39b7e25c3ce380eb5a7d89c39a2107e682")]
 [assembly: System.Reflection.AssemblyProductAttribute("BSharp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BSharp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
